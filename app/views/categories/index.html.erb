@@ -1,0 +1,21 @@
+ <div class="container no-padding">
+    <div class="row no-margin">
+      <h3 class="under"><a href="#nogo">All Categories</a></h3>
+    </div>
+   <% if flash[:notice] %>
+       <div class="alert alert-success fade in">
+         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+         <h5><strong>Info!</strong> <%= flash[:notice] if flash[:notice]%></h5>
+       </div>
+   <% end %>
+   <% if !@categories.blank? %>
+       <% @categories.each do |category| %>
+           <div class="container col-sm-4">
+             <div class="row">
+               <button type="button" class="btn btn-info"><h2 class="under"><a href="#nogo"><%= link_to category.name ,edit_category_path(category) %></a></h2></button>
+             </div>
+           </div>
+       <% end %>
+ <% end %>
+  </div>
+

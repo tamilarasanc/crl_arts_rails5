@@ -1,0 +1,48 @@
+<div class="container">
+
+    <%= form_for @section ,html: {class: "form-horizontal"} do |f| %>
+
+      <div class="form-group">
+      <% if @section.errors.any? %>
+          <div class="alert alert-danger fade in col-sm-4">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <h6>
+              <strong>Danger!</strong> <%= pluralize(@section.errors.count, "error") %> prohibited
+              this article from being saved:
+            </h6>
+            <ul>
+              <% @section.errors.full_messages.each do |msg| %>
+                  <h6><li><%= msg %></li></h6>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      </div>
+    <div class="form-group">
+      <h4><label class="control-label col-sm-4" for="name">Name :</label></h4>
+      <div class="col-sm-4 col-xs-12">
+        <%= f.text_field :name ,class:"form-control"%>
+      </div>
+    </div>
+    <div class="form-group">
+      <h4><label class="control-label col-sm-4" for="pwd">Alias Name :</label></h4>
+      <div class="col-sm-4">
+        <%= f.text_field :alias_name ,class:"form-control"%>
+      </div>
+    </div>
+    <div class="form-group">
+          <h4><label class="control-label col-sm-4 " >Active :</label></h4>
+      <div class="col-sm-4">
+          <%= f.check_box :active , class:"check_box" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-4 col-sm-10">
+        <%= f.submit 'Submit', :class => "btn btn-default" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+

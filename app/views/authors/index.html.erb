@@ -1,0 +1,21 @@
+ <div class="container no-padding">
+    <div class="row no-margin">
+      <h3 class="under"><a href="#nogo">All Authors</a></h3>
+    </div>
+   <% if flash[:notice] %>
+       <div class="alert alert-success fade in">
+         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+         <h5><strong>Info!</strong> <%= flash[:notice] if flash[:notice]%></h5>
+       </div>
+   <% end %>
+   <% if !@authors.blank? %>
+       <% @authors.each do |author| %>
+           <div class="container col-sm-4">
+             <div class="row">
+               <button type="button" class="btn btn-info"><h2 class="under"><a href="#nogo"><%=link_to author.fullname ,edit_author_path(author)%></a></h2></button>
+             </div>
+           </div>
+       <% end %>
+
+ <% end %>
+  </div>
