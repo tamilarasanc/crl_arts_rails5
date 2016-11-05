@@ -21,13 +21,13 @@
     <div class="form-group">
       <div class="col-sm-12">
        <div class="col-sm-6">
-      <h4><label class="control-label col-sm-4" for="name">Name :</label></h4>
+     <label class="control-label col-sm-4" for="name">Name :</label>
       <div class="col-sm-8 col-xs-12">
         <%= f.text_field :name ,class:"form-control"%>
       </div>
     </div>
       <div class="col-sm-6" >
-      <h4><label class="control-label col-sm-4" for="name">Alias Name :</label></h4>
+     <label class="control-label col-sm-4" for="name">Alias Name :</label>
       <div class="col-sm-8 col-xs-12">
         <%= f.text_field :alias_name,class:"form-control"%>
       </div>
@@ -37,13 +37,13 @@
     <div class="form-group">
       <div class="col-sm-12">
         <div class="col-sm-6">
-          <h4><label class="control-label col-sm-4" for="pwd">Parent Name :</label></h4>
+          <label class="control-label col-sm-4" for="pwd">Parent Name :</label>
           <div class="col-sm-8 col-xs-12">
           <%= f.collection_select(:parent_id ,Category.all,:id,:alias_name,{:include_blank => "For Creating Subcategory" })%>
         </div>
           </div>
          <div class="col-sm-6" >
-           <h4><label class="control-label col-sm-4 " >Active :</label></h4>
+           <label class="control-label col-sm-4 " >Active :</label>
            <div class="col-sm-1 col-xs-12">
              <%= f.check_box :active , class:"check_box" %>
            </div>

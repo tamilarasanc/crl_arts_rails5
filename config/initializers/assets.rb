@@ -11,5 +11,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += %w( template.css )
-Rails.application.config.assets.precompile += %w( jquery.nice-select.js )
-Rails.application.config.assets.precompile += %w( nice-select.css )
+Rails.application.config.assets.precompile += %w( jquery.nice-select.js jquery.tokeninput.js calendar.js)
+Rails.application.config.assets.precompile += %w( nice-select.css token-input.css calendar.css)

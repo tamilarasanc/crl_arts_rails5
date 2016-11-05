@@ -136,11 +136,41 @@ box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);background-color:#FFFFFF;position:r
 */
 
 .product-block{text-align:center;padding: 3.5% 0 3.5%;;background-color:#FFFFFF;}
-
+label {
+    font-size: 18px;
+}
 h3.under{margin-bottom:50px;position:relative;}
 h3.under:after{content:"";position:absolute;width:67px;border:1px solid #ff0000;left:50%;margin-left:-33px;bottom:-26px;}
 h2.under{margin-bottom:50px;position:relative;}
+.switch {  position: relative;  display: inline-block;  width: 60px;  height: 34px;  }
+.switch input {display:none;}
+.slider {  position: absolute;  cursor: pointer;  top: 0;  left: 0;  right: 0;  bottom: 0;  background-color: #ccc;  -webkit-transition: .4s;transition: .4s;  }
 
+.slider:before {  position: absolute;  content: "";height: 26px;  width: 26px;  left: 4px;  bottom: 4px;  background-color: white;  -webkit-transition: .4s;  transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
 .product-content{padding-top:5.8%;}
 .product{padding:0px 11px;}
 .product .icon{margin-bottom:20px;}

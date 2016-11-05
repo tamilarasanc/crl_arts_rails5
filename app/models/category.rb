@@ -4,5 +4,5 @@ class Category < ApplicationRecord
 
   has_and_belongs_to_many :articles
 
-  scope :parent, ->(category) { where("parent_id = ?",category.parent_id)}
+  #scope :parent, ->(category) { where("parent_id = ?",category.parent_id)}
 end

@@ -18,6 +18,8 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+#gem 'jquery_datepicker'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -35,6 +37,10 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-datetimepicker'
+end
+gem 'tinymce-rails'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'

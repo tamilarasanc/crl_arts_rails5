@@ -1,7 +1,14 @@
+
 <div class="article_block col-md-12 col-sm-12 col-xs-12 no-padding">
   <div class="container no-padding">
     <div class="row no-margin">
+      <%= tinymce_assets %>
       <h3 class="under"><a href="#nogo">New Article</a></h3>
+      <%= render :partial => 'form' %>
     </div>
   </div>
 </div>
+
+
+<%= tinymce :plugins => ["wordcount", "paste", "preview", "code", "table", "searchreplace", "image"], :toolbar => ["formatselect | searchreplace undo redo | bullist numlist | code image"] %>
+
